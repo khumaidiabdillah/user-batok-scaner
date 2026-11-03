@@ -4,6 +4,8 @@ import { supabaseUserDB } from '@/lib/supabase'
 import type { WorkScan } from '@/lib/types'
 import BerandaClient from './beranda-client'
 
+export const dynamic = 'force-dynamic'
+
 interface EmployeeSession {
   id: string
   nik: string
