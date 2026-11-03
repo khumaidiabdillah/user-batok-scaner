@@ -22,7 +22,7 @@ function sanitizeKey(raw?: string): string {
   return cleaned || 'placeholder-service-role-key'
 }
 
-const userUrl = sanitizeUrl(process.env.NEXT_PUBLIC_DB_USER_URL)
+const userUrl = sanitizeUrl(process.env.DB_USER_URL ?? process.env.NEXT_PUBLIC_DB_USER_URL)
 const userKey = sanitizeKey(process.env.DB_USER_SERVICE_ROLE_KEY)
 
 export const supabaseUserDB = createClient(
